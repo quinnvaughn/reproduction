@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "target": "ES2022",
+      "module": "CommonJS",
+      "outDir": "dist",
+      "sourceMap": true,
+      "types": ["node"],
+      "skipLibCheck": true,
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "emitDecoratorMetadata": true,
+      "downlevelIteration": true
+    },
+    "include": ["src/**/*.ts", "dbschema/**.ts"],
+    "exclude": ["node_modules", "dist"]
+  }
+  
