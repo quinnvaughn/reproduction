@@ -1,6 +1,7 @@
 import SchemaBuilder from '@pothos/core'
 import { Context } from './context'
 import { users } from '../dbschema/interfaces'
+import ErrorsPlugin from '@pothos/plugin-errors'
 
 type CurrentUser = Omit<users.User, 'role'>
 
@@ -26,6 +27,7 @@ export type TypesWithDefaults = PothosSchemaTypes.ExtendDefaultTypes<{
 
 export const builder = new SchemaBuilder<TypesWithDefaults>({
     // normally error plugin here.
+  plugins: [ErrorsPlugin]
 })
 
 builder.mutationType()
